@@ -51,8 +51,10 @@
       
       // TODO: register event onkeypress / addEventListener untuk input
       // sehingga saat di input ditekan enter akan menjalankan fungsi fnClickHandler juga
-      input.addEventListener('keydown', (event) => {
-      if (event.key === "Enter") output.appendChild(fnClickHandler(toDoItem.value))
+      input.addEventListener('keypress', (event) => {
+      if (event.key === "Enter") {
+        output.appendChild(fnClickHandler(toDoItem.value))
+      }
     })
     </script>
   </body>
